@@ -23,11 +23,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css
 
     <script>
 
-        const Swal = require('sweetalert2')
+        
          function checkScreenSizeAndAlert() {
-
-
-
              
             if (window.innerWidth < 1200) {
                 if (Swal.fire({
@@ -60,13 +57,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css
 
         }
 
-        window.onload = checkScreenSizeAndAlert;
-        window.onresize = checkScreenSizeAndAlert;
+       
     </script>
 
     
 </head>
-<body onload="detectMobileAndAlert()">
+<body  onload="checkScreenSizeAndAlert()" onresize="checkScreenSizeAndAlert()">
     <div class="box">
         <!-- left side -->
         <div class="leftSide">
