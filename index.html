@@ -10,17 +10,20 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.css" rel="stylesheet" type="text/css">
+  <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css
+" rel="stylesheet">
 
-    
- <script src=
-"https://cdn.jsdelivr.net/npm/sweetalert2@11">
-      </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+   
 
     <script>
+
+        const Swal = require('sweetalert2')
          function checkScreenSizeAndAlert() {
 
 
@@ -60,6 +63,7 @@
         window.onload = checkScreenSizeAndAlert;
         window.onresize = checkScreenSizeAndAlert;
     </script>
+
     
 </head>
 <body onload="detectMobileAndAlert()">
