@@ -9,26 +9,45 @@
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+ <script src=
+"https://cdn.jsdelivr.net/npm/sweetalert2@11">
+      </script>
+
 
     <script>
          function checkScreenSizeAndAlert() {
+
+
+
+             
             if (window.innerWidth < 1200) {
-                if (confirm("For a better experience, please enable desktop mode on your mobile browser. Click OK to see how to do it.")) {
+                if (Swal.fire({
+                title: 'This is a Custom Alert title',
+                text: 'Welcome to geeksForGeeks',
+                confirmButtonText: 'OK'
+            });)) {
                     showDesktopModeInstructions();
                 }
             }
+
+             
         }
 
         function showDesktopModeInstructions() {
-            const instructions = `Instructions to enable desktop mode:
-            
-            - On Chrome for Android:
+
+            Swal.fire({
+                title: 'Instructions to enable desktop mode:',
+                text: '  - On Chrome for Android:
               1. Tap the three-dot menu in the top-right corner.
               2. Check the 'Desktop site' option.
 
             - On Safari for iOS:
               1. Tap the 'aA' icon in the top-left corner of the address bar.
-              2. Select 'Request Desktop Website'.`;
+              2. Select 'Request Desktop Website',
+                confirmButtonText: 'OK'
+            });
+                       
+          
 
             alert(instructions);
         }
