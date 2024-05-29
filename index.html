@@ -32,17 +32,14 @@
               1. Tap the 'aA' icon in the top-left corner of the address bar.
               2. Select 'Request Desktop Website'.`;
 
-            alert(instructions);
+            
         }
 
-        window.onload = checkScreenSizeAndAlert;
-        window.onresize = checkScreenSizeAndAlert;
-       
     </script>
 
     
 </head>
-<body>
+<body  onload="checkScreenSizeAndAlert()" onresize="checkScreenSizeAndAlert()" >
     <div class="box">
         <!-- left side -->
         <div class="leftSide">
