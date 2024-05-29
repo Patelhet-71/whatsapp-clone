@@ -10,59 +10,39 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
-  <script src="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js
-"></script>
-<link href="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css
-" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-   
 
     <script>
 
-        
-         function checkScreenSizeAndAlert() {
-             
+      function checkScreenSizeAndAlert() {
             if (window.innerWidth < 1200) {
-                if (Swal.fire({
-                title: 'This is a Custom Alert title',
-                text: 'Welcome to geeksForGeeks',
-                confirmButtonText: 'OK'
-            });)) {
+                if (confirm("For a better experience, please enable desktop mode on your mobile browser. Click OK to see how to do it.")) {
                     showDesktopModeInstructions();
                 }
             }
-
-             
         }
 
         function showDesktopModeInstructions() {
-
-            Swal.fire({
-                title: 'Instructions to enable desktop mode:',
-                text: '  - On Chrome for Android:
+            const instructions = `Instructions to enable desktop mode:
+            
+            - On Chrome for Android:
               1. Tap the three-dot menu in the top-right corner.
               2. Check the 'Desktop site' option.
 
             - On Safari for iOS:
               1. Tap the 'aA' icon in the top-left corner of the address bar.
-              2. Select 'Request Desktop Website',
-                confirmButtonText: 'OK'
-            });
-                       
-          
+              2. Select 'Request Desktop Website'.`;
 
+            alert(instructions);
         }
 
+        window.onload = checkScreenSizeAndAlert;
+        window.onresize = checkScreenSizeAndAlert;
        
     </script>
 
     
 </head>
-<body  onload="checkScreenSizeAndAlert()" onresize="checkScreenSizeAndAlert()">
+<body>
     <div class="box">
         <!-- left side -->
         <div class="leftSide">
