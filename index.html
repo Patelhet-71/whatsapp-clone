@@ -9,9 +9,19 @@
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+
+    <script>
+        function detectMobileAndAlert() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            // Detect mobile devices
+            if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                alert("For a better experience, please enable desktop mode on your mobile browser.");
+            }
+        }
+    </script>
     
 </head>
-<body>
+<body onload="detectMobileAndAlert()">
     <div class="box">
         <!-- left side -->
         <div class="leftSide">
