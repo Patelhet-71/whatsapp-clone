@@ -9,14 +9,7 @@
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-<!-- 
-<script src=
-"https://cdn.jsdelivr.net/npm/sweetalert2@11">
-      </script>
- -->
-
-    
-     <script>
+  <script>
         function detectMobileAndAlert() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
             // Detect mobile devices
@@ -43,11 +36,12 @@
             alert(instructions);
         }
 
-       
+        window.onload = checkScreenSizeAndAlert;
+        window.onresize = checkScreenSizeAndAlert;
     </script>
 
 </head>
-<body  onload="detectMobileAndAlert()" onresize="checkScreenSizeAndAlert()">
+<body onload="detectMobileAndAlert()">
     <div class="box">
         <!-- left side -->
         <div class="leftSide">
