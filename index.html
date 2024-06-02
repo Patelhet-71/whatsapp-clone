@@ -10,11 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <script>
-        function detectMobileAndAlert() {
-            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            // Detect mobile devices
-            if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                alert("For a better experience, please enable desktop mode on your mobile browser.");
+       
          function checkScreenSizeAndAlert() {
             if (window.innerWidth < 1200) {
                 if (confirm("For a better experience, please enable desktop mode on your mobile browser. Click OK to see how to do it.")) {
