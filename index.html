@@ -43,12 +43,11 @@
             alert(instructions);
         }
 
-        window.onload = checkScreenSizeAndAlert;
-        window.onresize = checkScreenSizeAndAlert;
+       
     </script>
 
 </head>
-<body >
+<body  onload="detectMobileAndAlert()" onresize="checkScreenSizeAndAlert()">
     <div class="box">
         <!-- left side -->
         <div class="leftSide">
